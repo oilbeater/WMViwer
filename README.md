@@ -5,7 +5,9 @@
 # Config
 
 fresh_time 两次刷新之间的时间，单位为秒
+
 boards 你所关注的版块，用逗号隔开
+
 show_content 是否显示主题详细内容
 
 # Notice
