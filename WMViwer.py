@@ -15,13 +15,19 @@ def item_parse(item):
     return title,link,int(thread_id),data
 
 config = ConfigParser.ConfigParser()
-with open("config.ini","rw") as cfgfile:
+with open("config.ini","r") as cfgfile:
     config.readfp(cfgfile)
 fresh_time = int(config.get("default","fresh_time"))
 base_url = config.get("default","base_url")
 boards = config.get("default","boards").split(",")
 show_content = config.get("default","show_content")
 board_tops = {}.fromkeys(boards,0)
+
+print "----------------------------------------------"
+print "Thank you to use WM Viewer"
+print "The boards you are tracing : " + ",".join(boards)
+print "----------------------------------------------"
+
 
 while True:
     for board in boards:
